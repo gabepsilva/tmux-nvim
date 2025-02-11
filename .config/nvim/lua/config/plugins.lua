@@ -18,6 +18,9 @@ return require("lazy").setup({
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
+    config = function()
+      require('plugins.neo-tree')
+    end,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
@@ -30,7 +33,18 @@ return require("lazy").setup({
   },
   {
     "nvim-lualine/lualine.nvim",
+    config = function()
+      require('plugins.lualine')
+    end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    config = function()
+      require("bufferline").setup{}
+    end,
+    dependencies = {"nvim-tree/nvim-web-devicons"}
   },
   {
     "folke/tokyonight.nvim",
