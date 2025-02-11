@@ -15,5 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 -- Load plugin configuration
 require("config.plugins")
 
+-- Load keymaps
+require("config.keymaps")
+
+
 -- Basic configurations
 vim.cmd[[colorscheme tokyonight]]
